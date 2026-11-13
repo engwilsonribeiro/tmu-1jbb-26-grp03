@@ -1,33 +1,433 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Atrion</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATRION | Automóveis Premium</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <header>
+    <!-- MENU -->
+    <header class="cabecalho">
+        <a href="#inicio" class="logo">
+            <img src="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNmE3YzYzNjllZjBjODE5MTk5MTk3OTNiMDEwN2Q3MWM6ZmlsZV8wMDAwMDAwMDhmZWM4MjBlYTFkNDVlYmU2Yjg4Yjg4YSIsImdpem1vX2lkIjpudWxsLCJ3aWQiOm51bGwsIm9pZCI6bnVsbCwic2lkIjpudWxsLCJjcyI6bnVsbCwiZm4iOm51bGwsImNkIjpudWxsLCJ0cyI6IjIwNzY2IiwicCI6InB5aSIsImNpZCI6IjEiLCJzaWciOiJlYjdkNWViZmQ3MmJiZjVhZWNmMmIxY2Q0ZGMzNzQ5NjQzZWI1ZmMzMzVlNjU0MzFmMDljYWZiZWI5NGZiZGMxIiwidiI6IjAiLCJjZG4iOm51bGwsImNwIjpudWxsLCJtYSI6bnVsbH0=" alt="ATRION">
+        </a>
 
-    <h1>ATRION</h1>
+        <button class="menu-toggle" id="menuToggle">☰</button>
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Veículos</a>
-        <a href="#">Sobre nós</a>
-        <a href="contatos.html">Contato</a>
-    </nav>
+        <nav id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#veiculos">Veículos</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#test-drive">Test Drive</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-</header>
-<section class="inicio">
+    <main>
 
-    <h2>Encontre o carro ideal para você</h2>
-    <img src="images/carros/Equinox2-1151x768.jpg">
-</section>
-<button>Ver veículos</button>
-.inicio img {
-    width: 500px;
-}
+        <!-- PÁGINA 1: INÍCIO -->
+        <section class="pagina inicio" id="inicio">
+
+            <div class="imagem-principal"></div>
+
+            <div class="conteudo-inicio">
+                <p class="subtitulo">DESIGN • TECNOLOGIA • PERFORMANCE</p>
+
+                <h1>ATRION</h1>
+
+                <h2>
+                    A engenharia da performance
+                    ao seu alcance.
+                </h2>
+
+                <a href="#veiculos" class="botao">
+                    CONHEÇA NOSSOS MODELOS ↗
+                </a>
+            </div>
+            
+            <div class="video">
+                <video autoplay muted loop >
+                    <source src="./videos/carro.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="rodape-hero">
+                <span>01 / 05</span>
+                <span>MOVE BEYOND THE EXPECTED</span>
+            </div>
+
+        </section>
+
+
+        <!-- PÁGINA 2: VEÍCULOS -->
+        <section class="pagina veiculos" id="veiculos">
+
+            <div class="titulo-pagina">
+                <p class="subtitulo">NOSSA LINHA</p>
+                <h2>Escolha sua próxima experiência.</h2>
+                <p>Conheça os modelos exclusivos ATRION.</p>
+            </div>
+
+            <div class="grade-carros">
+
+                <article class="card-carro" data-modelo="a1">
+                    <button class="abrir-carro">
+                        <img src="assets/atrion-sedan.png" alt="ATRION A1">
+
+                        <span class="categoria">ELÉTRICO • LUXO</span>
+
+                        <h3>ATRION A1</h3>
+                        <p>Sedã elétrico</p>
+
+                        <strong>A partir de R$ 289.900*</strong>
+                        <span class="seta">↗</span>
+                    </button>
+                </article>
+
+                <article class="card-carro" data-modelo="s9">
+                    <button class="abrir-carro">
+                        <img src="assets/atrion-esportivo.png" alt="ATRION S9">
+
+                        <span class="categoria">PERFORMANCE • ESPORTIVO</span>
+
+                        <h3>ATRION S9</h3>
+                        <p>Cupê esportivo</p>
+
+                        <strong>A partir de R$ 419.900*</strong>
+                        <span class="seta">↗</span>
+                    </button>
+                </article>
+
+                <article class="card-carro conceito">
+                    <div class="conceito-imagem">
+                        <span>ATRION</span>
+                        <h3>COMING NEXT</h3>
+                    </div>
+
+                    <h3>ATRION X</h3>
+                    <p>O próximo capítulo</p>
+                    <strong>Em breve</strong>
+                </article>
+
+            </div>
+
+            <p class="aviso">
+                *Preços ilustrativos para demonstração do projeto.
+            </p>
+
+            <div class="grade-carros">
+
+                <article class="card-carro" data-modelo="a1">
+                    <button class="abrir-carro">
+                        <img src="assets/atrion-sedan.png" alt="ATRION A1">
+
+                        <span class="categoria">ELÉTRICO • LUXO</span>
+
+                        <h3>ATRION A1</h3>
+                        <p>Sedã elétrico</p>
+
+                        <strong>A partir de R$ 289.900*</strong>
+                        <span class="seta">↗</span>
+                    </button>
+                </article>
+            <div class="grade-carros">
+
+<article class="card-carro" data-modelo="a1">
+          <button class="abrir-carro">
+            <img src="assets/atrion-sedan.png" alt="ATRION A1">
+
+            <span class="categoria">ELÉTRICO • LUXO</span>
+
+            <h3>ATRION A1</h3>
+            <p>Sedã elétrico</p>
+
+            <strong>A partir de R$ 289.900*</strong>
+            <span class="seta">↗</span>
+          </button>
+        </article>
+
+        </section>
+
+
+        <!-- PÁGINA 3: SOBRE NÓS -->
+        <section class="pagina sobre" id="sobre">
+
+            <div class="conteudo-sobre">
+
+                <p class="subtitulo">A ESSÊNCIA ATRION</p>
+
+                <h2>
+                    Mais que dirigir.
+                    <span>Sentir a evolução.</span>
+                </h2>
+
+                <p class="texto-sobre">
+                    A ATRION nasce da união entre design marcante,
+                    tecnologia inteligente e paixão por automóveis.
+                    Cada detalhe é pensado para transformar o caminho
+                    em uma experiência extraordinária.
+                </p>
+
+                <div class="pilares">
+
+                    <div>
+                        <span>01</span>
+                        <h3>Missão</h3>
+                        <p>
+                            Entregar excelência, tecnologia e uma
+                            experiência de condução única.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <h3>Visão</h3>
+                        <p>
+                            Ser referência em sofisticação,
+                            inovação e desempenho automotivo.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <h3>Valores</h3>
+                        <p>
+                            Inovação contínua, transparência
+                            e satisfação dos clientes.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PÁGINA 4: TEST DRIVE -->
+        <section class="pagina test-drive" id="test-drive">
+
+            <div class="introducao-formulario">
+
+                <p class="subtitulo">SINTA A DIFERENÇA</p>
+
+                <h2>
+                    Seu próximo
+                    <span>test drive.</span>
+                </h2>
+
+                <p>
+                    Escolha seu modelo favorito e solicite
+                    uma experiência ATRION.
+                </p>
+
+            </div>
+
+            <form class="formulario" id="formTestDrive">
+
+                <h3>Solicite seu agendamento</h3>
+
+                <label>Nome completo</label>
+                <input type="text" name="nome"
+                    placeholder="Digite seu nome" required>
+
+                <div class="linha-formulario">
+
+                    <div>
+                        <label>E-mail</label>
+                        <input type="email" name="email"
+                            placeholder="seu@email.com" required>
+                    </div>
+
+                    <div>
+                        <label>Telefone / WhatsApp</label>
+                        <input type="tel" name="telefone"
+                            placeholder="(00) 00000-0000" required>
+                    </div>
+
+                </div>
+
+                <label>Modelo desejado</label>
+                <select name="modelo" id="modeloSelecionado" required>
+                    <option value="">Selecione um modelo</option>
+                    <option>ATRION A1</option>
+                    <option>ATRION S9</option>
+                </select>
+
+                <div class="linha-formulario">
+
+                    <div>
+                        <label>Data preferida</label>
+                        <input type="date" name="data" required>
+                    </div>
+
+                    <div>
+                        <label>Horário preferido</label>
+                        <input type="time" name="horario" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="botao">
+                    SOLICITAR AGENDAMENTO ↗
+                </button>
+
+                <p id="mensagemTestDrive" class="mensagem"></p>
+
+                <small>
+                    Protótipo demonstrativo. Nenhum dado será enviado.
+                </small>
+
+            </form>
+
+        </section>
+
+
+        <!-- PÁGINA 5: CONTATO -->
+        <section class="pagina contato" id="contato">
+
+            <div class="titulo-pagina">
+
+                <p class="subtitulo">ESTAMOS À DISPOSIÇÃO</p>
+
+                <h2>Vamos conversar?</h2>
+
+                <p>Entre em contato com a equipe ATRION.</p>
+
+            </div>
+
+            <div class="area-contato">
+
+                <div class="informacoes-contato">
+
+                    <div>
+                        <span>TELEFONE</span>
+                        <h3>(17) 0000-0000</h3>
+                    </div>
+
+                    <div>
+                        <span>WHATSAPP</span>
+                        <h3>(17) 90000-0000</h3>
+                    </div>
+
+                    <div>
+                        <span>E-MAIL</span>
+                        <h3>contato@atrion.com.br</h3>
+                    </div>
+
+                    <div>
+                        <span>SHOWROOM</span>
+                        <h3>São José do Rio Preto - SP</h3>
+                    </div>
+
+                    <div class="mapa">
+                        <span>⌖</span>
+                        <h3>ATRION SHOWROOM</h3>
+                        <p>Localização a definir</p>
+                    </div>
+
+                </div>
+
+                <form class="formulario" id="formContato">
+
+                    <h3>Fale conosco</h3>
+
+                    <label>Nome</label>
+                    <input type="text" placeholder="Seu nome" required>
+
+                    <label>E-mail</label>
+                    <input type="email" placeholder="Seu e-mail" required>
+
+                    <label>Assunto</label>
+                    <input type="text" placeholder="Assunto" required>
+
+                    <label>Mensagem</label>
+                    <textarea rows="4"
+                        placeholder="Escreva sua mensagem..."
+                        required></textarea>
+
+                    <button type="submit" class="botao">
+                        ENVIAR MENSAGEM ↗
+                    </button>
+
+                    <p id="mensagemContato" class="mensagem"></p>
+
+                    <small>
+                        Protótipo demonstrativo. Mensagens não são enviadas.
+                    </small>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JANELA DE DETALHES DOS CARROS -->
+    <div class="modal" id="modalCarro">
+
+        <div class="fundo-modal" data-fechar></div>
+
+        <div class="conteudo-modal">
+
+            <button class="fechar-modal" data-fechar>×</button>
+
+            <img id="imagemModal" src="" alt="">
+
+            <div class="detalhes-modal">
+
+                <p class="subtitulo">DETALHES DO MODELO</p>
+
+                <h2 id="nomeModal">ATRION</h2>
+
+                <p id="descricaoModal"></p>
+
+                <div class="especificacoes">
+
+                    <div>
+                        <span>MOTORIZAÇÃO</span>
+                        <strong id="motorModal"></strong>
+                    </div>
+
+                    <div>
+                        <span>POTÊNCIA</span>
+                        <strong id="potenciaModal"></strong>
+                    </div>
+
+                    <div>
+                        <span>TECNOLOGIA</span>
+                        <strong id="tecnologiaModal"></strong>
+                    </div>
+
+                </div>
+
+                <p class="aviso-galeria">
+                    Galeria interna e externa completa poderá
+                    ser adicionada na próxima etapa.
+                </p>
+
+                <a href="#test-drive" id="botaoModal" class="botao">
+                    AGENDAR TEST DRIVE ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <span>© 2026 ATRION AUTOMÓVEIS</span>
+        <span>DESIGN • TECNOLOGIA • PERFORMANCE</span>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+    

@@ -1,41 +1,781 @@
-h1 {
-    color: red;
-    font-size: 50px;
-    text-align: center;
-}img {
-    width: 400px;
-    border-radius: 15px;
-}header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 60px;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header h1 {
-    font-size: 28px;
-    letter-spacing: 3px;
+:root {
+    --preto: #000000;
+    --cinza: #a7abb3;
+    --branco: #f4f5f7;
+    --azul: #168cff;
+    --painel: #101114;
 }
-</section>
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid #ffffff20;
+}
+
+.logo {
+    width: 135px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 34px;
 }
 
 nav a {
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-}header {
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-}
-.inicio {
-    text-align: center;
-    padding: 80px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--cinza);
+    transition: 0.3s;
 }
 
-.inicio h2 {
-    font-size: 40px;
+nav a:hover {
+    color: var(--azul);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* PÁGINAS */
+
+.pagina {
+    display: none;
+    min-height: 100vh;
+    padding: 125px 8% 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagina.ativa {
+    display: block;
+    animation: entrada 0.5s ease;
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* INÍCIO */
+
+.inicio.ativa {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 8%;
+}
+
+.imagem-principal {
+    position: absolute;
+    right: -5%;
+    top: 14%;
+    width: 75%;
+    height: 75%;
+
+    background:
+        url('../assets/atrion-sedan.png')
+        center / contain no-repeat;
+
+    opacity: 0.95;
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 65%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        black 65%,
+        transparent 100%
+    );
+}
+
+.conteudo-inicio {
+    position: relative;
+    z-index: 2;
+    max-width: 540px;
+    margin-top: 55px;
+}
+
+.subtitulo {
+    color: #8e969f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.conteudo-inicio h1 {
+    font-size: clamp(58px, 9vw, 118px);
+    font-weight: 500;
+    letter-spacing: 15px;
+}
+
+.conteudo-inicio h2 {
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 20px 0 35px;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 17px 22px;
+    background: var(--branco);
+    color: #08090b;
+    border: 1px solid var(--branco);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: var(--azul);
+    border-color: var(--azul);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.rodape-hero {
+    position: absolute;
+    bottom: 35px;
+    left: 8%;
+    right: 8%;
+    display: flex;
+    justify-content: space-between;
+    color: #727780;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* TÍTULOS */
+
+.titulo-pagina {
+    text-align: center;
+    max-width: 750px;
+    margin: 20px auto 55px;
+}
+
+.titulo-pagina h2 {
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.titulo-pagina > p:last-child {
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+/* VEÍCULOS */
+
+.grade-carros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card-carro {
+    background: #101114;
+    border: 1px solid #ffffff20;
+    position: relative;
+    transition: 0.3s;
+    padding-bottom: 25px;
+}
+
+.card-carro:hover {
+    border-color: #ffffff80;
+    transform: translateY(-5px);
+}
+
+.abrir-carro {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.abrir-carro img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.categoria {
+    display: block;
+    padding: 22px 22px 12px;
+    color: var(--cinza);
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.card-carro h3 {
+    padding: 0 22px;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.card-carro p {
+    padding: 7px 22px;
+    font-size: 11px;
+    color: var(--cinza);
+}
+
+.card-carro strong {
+    display: block;
+    padding: 15px 22px 0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.seta {
+    position: absolute;
+    right: 22px;
+    bottom: 25px;
+    color: var(--azul);
+    font-size: 21px;
+}
+
+.conceito-imagem {
+    height: 230px;
+    background: radial-gradient(ellipse, #303741, #08090b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #a7abb3;
+    letter-spacing: 5px;
+}
+
+.conceito-imagem h3 {
+    color: white;
+    font-size: 24px;
+}
+
+.aviso {
+    max-width: 1200px;
+    margin: 22px auto;
+    color: #656a72;
+    font-size: 9px;
+}
+
+/* SOBRE NÓS */
+
+.sobre {
+    display: none;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #000 0%, #000e 50%, #0009 100%),
+        url('../assets/atrion-sedan.png') 75% center / 70% auto no-repeat;
+}
+
+.sobre.ativa {
+    display: flex;
+}
+
+.conteudo-sobre {
+    position: relative;
+    max-width: 1050px;
+    margin: auto;
+    width: 100%;
+}
+
+.sobre h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.sobre h2 span,
+.introducao-formulario h2 span {
+    color: var(--cinza);
+}
+
+.texto-sobre {
+    max-width: 570px;
+    color: #b2b6bd;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 25px 0 55px;
+}
+
+.pilares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.pilares div {
+    border-top: 1px solid #ffffff55;
+    padding-top: 18px;
+}
+
+.pilares span {
+    color: var(--azul);
+    font-size: 10px;
+}
+
+.pilares h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 14px 0;
+}
+
+.pilares p {
+    color: var(--cinza);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* TEST DRIVE */
+
+.test-drive {
+    display: none;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 9%;
+    align-items: center;
+}
+
+.test-drive.ativa {
+    display: grid;
+}
+
+.introducao-formulario h2 {
+    font-size: clamp(44px, 6vw, 70px);
+    font-weight: 400;
+}
+
+.introducao-formulario > p:last-child {
+    color: var(--cinza);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-top: 25px;
+}
+
+.formulario {
+    background: var(--painel);
+    border: 1px solid #ffffff20;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.formulario h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.formulario label {
+    color: #aeb2ba;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    margin-top: 9px;
+    padding: 14px;
+    background: #08090b;
+    border: 1px solid #ffffff25;
+    color: white;
+    outline: none;
+    font-size: 12px;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border-color: var(--azul);
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #666b73;
+}
+
+.formulario input[type="date"],
+.formulario input[type="time"] {
+    color-scheme: dark;
+}
+
+.linha-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.formulario small {
+    color: #666b73;
+    font-size: 9px;
+}
+
+.mensagem {
+    color: #8ec7ff;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* CONTATO */
+
+.area-contato {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.informacoes-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.informacoes-contato > div:not(.mapa) {
+    border-top: 1px solid #ffffff30;
+    padding-top: 15px;
+}
+
+.informacoes-contato span {
+    display: block;
+    color: #7e858e;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.informacoes-contato h3 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.mapa {
+    grid-column: 1 / -1;
+    height: 190px;
+    background: linear-gradient(135deg, #15191e, #090a0c);
+    border: 1px solid #ffffff20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.mapa span {
+    color: var(--azul);
+    font-size: 30px;
+}
+
+.mapa p {
+    color: #777e88;
+    font-size: 10px;
+}
+
+/* MODAL DOS CARROS */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.modal.aberto {
+    display: flex;
+}
+
+.fundo-modal {
+    position: absolute;
+    inset: 0;
+    background: #000d;
+    backdrop-filter: blur(8px);
+}
+
+.conteudo-modal {
+    position: relative;
+    z-index: 1;
+    max-width: 980px;
+    width: 100%;
+    background: #101216;
+    border: 1px solid #ffffff30;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.fechar-modal {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.conteudo-modal > img {
+    width: 100%;
+    height: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    background: #050607;
+}
+
+.detalhes-modal {
+    padding: 55px 35px 35px;
+}
+
+.detalhes-modal h2 {
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.detalhes-modal > p:not(.subtitulo) {
+    color: #aeb3bc;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 14px 0;
+}
+
+.especificacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.especificacoes div {
+    border-top: 1px solid #ffffff30;
+    padding-top: 12px;
+}
+
+.especificacoes span {
+    display: block;
+    color: #7e8792;
+    font-size: 8px;
+    margin-bottom: 9px;
+}
+
+.especificacoes strong {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.aviso-galeria {
+    font-size: 10px !important;
+    color: #777e88 !important;
+}
+
+/* RODAPÉ */
+
+footer {
+    border-top: 1px solid #ffffff18;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    color: #666c75;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+
+.video{
+    border:1px solid white;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+
+    .cabecalho {
+        padding: 0 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #08090b;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    .grade-carros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .test-drive.ativa {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .area-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-principal {
+        opacity: 0.65;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .pagina {
+        padding: 110px 6% 65px;
+    }
+
+    .inicio.ativa {
+        padding: 0 6%;
+    }
+
+    .imagem-principal {
+        width: 130%;
+        right: -35%;
+        top: 22%;
+        opacity: 0.5;
+    }
+
+    .conteudo-inicio h1 {
+        font-size: 60px;
+        letter-spacing: 8px;
+    }
+
+    .grade-carros {
+        grid-template-columns: 1fr;
+    }
+
+    .pilares {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .linha-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .informacoes-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa {
+        grid-column: auto;
+    }
+
+    .conteudo-modal {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-modal > img {
+        height: 230px;
+    }
+
+    .detalhes-modal {
+        padding: 25px 22px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
 }
