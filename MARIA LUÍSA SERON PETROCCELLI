@@ -1,0 +1,43 @@
+body{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight:  bold;
+    padding: 10px 20px 20px 10px;
+    display: block;
+    transition: 0.2s;
+}
+
+nav ul li a:hover{
+    background-color: rgb(134, 133, 131);
+    color: rgb(211, 224, 197);
+
+}
+
+.logomarca{
+    position: absolute;
+    left: 0;
+    top: 250px;
+    background-repeat: no-repeat;
+    z-index: 99;
+    background-image: url("../images/logo.PNG");
+    width: 500px;
+    height: 500px;
+    transform: translateY(-50%);
+
+}
+
