@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar visita | Atrion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ATRION</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="veiculos.html">Veículos</a>
+            <a href="index.html#sobre-nos">Sobre nós</a>
+            <a href="contatos.html">Contato</a>
+            <a href="agendar.html" class="pagina-atual">Agendar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-agendar">
+        <section class="introducao-agendar">
+            <p class="subtitulo-contato">SUA PRÓXIMA EXPERIÊNCIA COMEÇA AQUI</p>
+
+            <h2>Agende sua visita à Atrion</h2>
+
+            <p>
+                Escolha o melhor dia para conhecer nossos veículos
+                de perto e receber um atendimento personalizado.
+            </p>
+        </section>
+
+        <section class="area-agendamento">
+            <div class="texto-agendamento">
+                <h3>Uma experiência ao seu estilo.</h3>
+
+                <p>
+                    Venha conhecer os detalhes, o conforto e a tecnologia
+                    dos nossos veículos.
+                </p>
+
+                <div class="beneficio-agendamento">
+                    <h4>Atendimento personalizado</h4>
+                    <p>Uma equipe pronta para apresentar os veículos do seu interesse.</p>
+                </div>
+
+                <div class="beneficio-agendamento">
+                    <h4>Conheça de perto</h4>
+                    <p>Veja os detalhes do veículo e tire suas dúvidas presencialmente.</p>
+                </div>
+
+                <div class="beneficio-agendamento">
+                    <h4>Escolha seu horário</h4>
+                    <p>Informe a data e o período que funcionam melhor para você.</p>
+                </div>
+            </div>
+
+            <form class="form-agendamento" id="form-agendamento">
+                <h3>Solicitar agendamento</h3>
+
+                <p class="texto-form-agendamento">
+                    Preencha os dados para solicitar sua visita.
+                </p>
+
+                <label for="nome-agendamento">Nome completo</label>
+                <input type="text" id="nome-agendamento"
+                       placeholder="Seu nome" required>
+
+                <label for="telefone-agendamento">WhatsApp ou telefone</label>
+                <input type="tel" id="telefone-agendamento"
+                       placeholder="(00) 00000-0000" required>
+
+<button type="button" class="botao-ja-cadastro"
+        onclick="window.location.href='index.html#cadastro'">
+    Já tem cadastro?
+</button>
+
+                <label for="veiculo-agendamento">Veículo de interesse</label>
+                <select id="veiculo-agendamento" required>
+                    <option value="">Selecione um veículo</option>
+                    <option value="Chevrolet Equinox EV">Chevrolet Equinox EV</option>
+                    <option value="Outro veículo">Outro veículo</option>
+                    <option value="Ainda não escolhi">Ainda não escolhi</option>
+                </select>
+
+                <label for="data-agendamento">Data desejada</label>
+                <input type="date" id="data-agendamento" required>
+
+                <label for="periodo-agendamento">Período preferido</label>
+                <select id="periodo-agendamento" required>
+                    <option value="">Escolha um período</option>
+                    <option value="Manhã">Manhã — 8h às 12h</option>
+                    <option value="Tarde">Tarde — 13h às 18h</option>
+                </select>
+
+                <label for="observacoes-agendamento">Observações (opcional)</label>
+                <textarea id="observacoes-agendamento"
+                          rows="3"
+                          placeholder="Alguma preferência ou dúvida?"></textarea>
+
+                <button type="submit">SOLICITAR VISITA</button>
+
+                <p id="retorno-agendamento" class="retorno-agendamento"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
