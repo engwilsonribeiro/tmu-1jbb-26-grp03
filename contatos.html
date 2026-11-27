@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Atrion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+       <header>
+    <h1>ATRION</h1>
+
+    <nav>
+        <a href="index.html" class="botao-agendar">Início</a>
+        <a href="veiculos.html" class="botao-agendar botao-veiculos">Veículos</a>
+       <a href="#sobre-nos">Sobre nós</a>
+<a href="contatos.html" class="pagina-atual">Contato</a>
+        <a href="#">Agendar</a></a>
+</header>
+
+    <main class="contato">
+        <p class="subtitulo-contato">FALE COM A ATRION</p>
+
+        <h2>Vamos encontrar seu próximo carro?</h2>
+
+        <p class="descricao-contato">
+            Ficou interessado em algum veículo?
+            Entre em contato com nossa equipe!
+        </p>
+
+        <div class="conteudo-contato">
+
+            <div class="informacoes-contato">
+                <h3>Nossos contatos</h3>
+
+                <div class="item-contato">
+                    <h4>WhatsApp</h4>
+                    <p>Fale diretamente com nossa equipe.</p>
+                    <a class="link-contato"
+                       href="https://wa.me/5511999990000"
+                       target="_blank">
+                        Conversar pelo WhatsApp
+                    </a>
+                </div>
+
+                <div class="item-contato">
+                    <h4>E-mail</h4>
+                    <p>contato@atrion.hotmail.com</p>
+                </div>
+
+                <div class="item-contato">
+                    <h4>Localização</h4>
+                    <p>São Paulo - SP</p>
+                    <p>Av. Rio Das Pedras, 1106.</p>
+                </div>
+
+                <div class="item-contato">
+                    <h4>Horário de atendimento</h4>
+                    <p>Segunda a sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 13h</p>
+                </div>
+            </div>
+
+            <form class="form-contato" id="form-contato">
+                <h3>Envie sua mensagem</h3>
+
+                <label for="contato-nome">Nome completo</label>
+                <input type="text" id="contato-nome"
+                       placeholder="Seu nome" required>
+
+                <label for="contato-email">E-mail</label>
+                <input type="email" id="contato-email"
+                       placeholder="seu@email.com" required>
+
+                <label for="contato-assunto">Assunto</label>
+                <select id="contato-assunto" required>
+                    <option value="">Selecione um assunto</option>
+                    <option value="veiculos">Informações sobre veículos</option>
+                    <option value="outros">Outros assuntos</option>
+                </select>
+
+                <label for="contato-mensagem">Sua mensagem</label>
+                <textarea id="contato-mensagem"
+                          placeholder="Escreva sua mensagem..."
+                          rows="4" required></textarea>
+
+                <button type="submit">ENVIAR MENSAGEM</button>
+
+                <p id="retorno-contato"></p>
+            </form>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veículos | Atrion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ATRION</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+<a href="veiculos.html" class="pagina-atual">Veículos</a>
+           <a href="index.html#sobre-nos">Sobre nós</a>
+            <a href="#">Contato</a>
+            <a href="index.html#agendamento">Agendar</a>
+        </nav>
+    </header>
+
+    <section class="pagina-veiculos">
+        <p class="subtitulo-veiculos">NOSSO CATÁLOGO</p>
+
+        <h2>Encontre seu próximo carro.</h2>
+
+        <p class="descricao-veiculos">
+            Explore os modelos disponíveis e descubra o veículo ideal para você.
+        </p>
+    </section>
+        <section class="catalogo-carros">
+        <div class="card-carro">
+            <img src="images/carros/Equinox2-1151x768.jpg" alt="Chevrolet Equinox">
+            <h3>Chevrolet Equinox</h3>
+            <p>Conheça os detalhes deste modelo.</p>
+            
+<button class="botao-detalhes" onclick="mostrarDetalhes()">
+    Ver detalhes
+</button>
+
+        </div>
+        <div id="detalhes-equino x" class="detalhes-ocultos">
+    <h3>Chevrolet Equinox</h3>
+    <p>Categoria: SUV</p>
+    <p>Design moderno, espaço interno e conforto para sua rotina.</p>
+</div>
+
+
+<div id="detalhes-equinox" class="detalhes-ocultos">
+
+    <p class="subtitulo-veiculos">FICHA DO VEÍCULO</p>
+
+    <h3>Chevrolet Equinox</h3>
+    <p class="preco-carro">Preço: Sob consulta</p>
+
+    <p>
+        Um SUV com visual moderno, proposta familiar e espaço
+        para quem procura conforto e praticidade no dia a dia.
+    </p>
+
+    <div class="lista-informacoes">
+
+        <div class="item-informacao">
+            <h4>Categoria</h4>
+            <p>SUV</p>
+        </div>
+
+        <div class="item-informacao">
+            <h4>Carroceria</h4>
+            <p>Utilitário esportivo</p>
+        </div>
+
+        <div class="item-informacao">
+            <h4>Design</h4>
+            <p>Visual moderno e linhas marcantes</p>
+        </div>
+
+        <div class="item-informacao">
+            <h4>Espaço interno</h4>
+            <p>Proposta voltada ao conforto dos ocupantes</p>
+        </div>
+
+        <div class="item-informacao">
+            <h4>Tecnologia</h4>
+            <p>Recursos variam conforme a versão</p>
+        </div>
+
+        <div class="item-informacao">
+            <h4>Segurança</h4>
+            <p>Equipamentos variam conforme a versão</p>
+        </div>
+
+    </div>
+
+    <p class="aviso-veiculo">
+        Consulte a Atrion para confirmar os equipamentos e
+        as especificações da versão disponível.
+    </p>
+
+    <a href="index.html#agendamento" class="botao-voltar">
+        TENHO INTERESSE
+    </a>
+
+</div>
+
+    <h3>Chevrolet Equinox</h3>
+    <p>Categoria: SUV</p>
+    <p>Um veículo com design moderno, espaço interno e conforto.</p>
+</div>
+
+    </section>
+
+<script>
+function mostrarDetalhes() {
+    const detalhes = document.getElementById("detalhes-equinox");
+
+    if (detalhes.style.display === "block") {
+        detalhes.style.display = "none";
+    } else {
+        detalhes.style.display = "block";
+    }
+}
+</script>
+
+</body>
+<script>
+function mostrarDetalhes() {
+    const detalhes = document.getElementById("detalhes-equinox");
+
+    if (detalhes.style.display === "block") {
+        detalhes.style.display = "none";
+    } else {
+        detalhes.style.display = "block";
+    }
+}
+</script>
