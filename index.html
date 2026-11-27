@@ -5,139 +5,136 @@
     <meta charset="UTF-8">
     <title>Atrion</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body id="inicio">
 
-<header>
-    <h1>ATRION</h1>
+    <header>
+        <h1>ATRION</h1>
 
-    <nav>
-        
-<a href="index.html" class="pagina-atual">Início</a>
-        <a href="veiculos.html" class="botao-agendar botao-veiculos">Veículos</a>
-       <a href="#sobre-nos">Sobre nós</a>
-        <a href="contatos.html">Contato</a>   
-<a href="agendar.html">Agendar</a>
+        <nav>
 
-
-</header>
+            <a href="index.html" class="pagina-atual">Início</a>
+            <a href="veiculos.html" class="botao-agendar botao-veiculos">Veículos</a>
+            <a href="#sobre-nos">Sobre nós</a>
+            <a href="contatos.html">Contato</a>
+            <a href="agendar.html">Agendar</a>
 
 
-<section class="inicio">
-    <h2>Encontre o carro ideal para você</h2>
-
-    <div class="destaque-inicio">
-
-        
-<form class="form-contato" id="form-contato">
-    <h3>Como podemos ajudar?</h3>
-
-    <p class="texto-form-contato">
-        Envie sua dúvida e nossa equipe poderá orientar você.
-    </p>
-
-    <label for="contato-nome">Como podemos chamar você?</label>
-    <input type="text" id="contato-nome"
-           placeholder="Digite seu nome" required>
-
-    <label for="contato-email">Qual é seu e-mail?</label>
-    <input type="email" id="contato-email"
-           placeholder="voce@email.com" required>
-
-    <label for="contato-assunto">Sobre o que deseja falar?</label>
-    <select id="contato-assunto" required>
-        <option value="">Escolha uma opção</option>
-        <option value="veiculo">Tenho interesse em um veículo</option>
-        <option value="preco">Quero saber preços e condições</option>
-        <option value="visita">Quero conhecer um veículo</option>
-        <option value="duvida">Tenho outra dúvida</option>
-    </select>
-
-    <label for="contato-mensagem">Sua mensagem</label>
-    <textarea id="contato-mensagem"
-              placeholder="Conte como podemos ajudar..."
-              rows="5" required></textarea>
-
-    <button type="submit">Enviar solicitação</button>
-
-    <p id="retorno-contato" class="retorno-contato"></p>
-</form>
+    </header>
 
 
-        <div class="carrossel">
-            <button id="anterior">←</button>
+    <section class="inicio">
+        <h2>Encontre o carro ideal para você</h2>
 
-            <img id="imagem-carro" src="images/carros/Equinox2-1151x768.jpg">
+        <div class="destaque-inicio">
 
-            <button id="proximo">→</button>
+
+            <form class="form-contato" id="form-contato">
+                <h3>Como podemos ajudar?</h3>
+
+                <p class="texto-form-contato">
+                    Envie sua dúvida e nossa equipe poderá orientar você.
+                </p>
+
+                <label for="contato-nome">Como podemos chamar você?</label>
+                <input type="text" id="contato-nome" placeholder="Digite seu nome" required>
+
+                <label for="contato-email">Qual é seu e-mail?</label>
+                <input type="email" id="contato-email" placeholder="voce@email.com" required>
+
+                <label for="contato-assunto">Sobre o que deseja falar?</label>
+                <select id="contato-assunto" required>
+                    <option value="">Escolha uma opção</option>
+                    <option value="veiculo">Tenho interesse em um veículo</option>
+                    <option value="preco">Quero saber preços e condições</option>
+                    <option value="visita">Quero conhecer um veículo</option>
+                    <option value="duvida">Tenho outra dúvida</option>
+                </select>
+
+                <label for="contato-mensagem">Sua mensagem</label>
+                <textarea id="contato-mensagem" placeholder="Conte como podemos ajudar..." rows="5" required></textarea>
+
+                <button type="submit">Enviar solicitação</button>
+
+                <p id="retorno-contato" class="retorno-contato"></p>
+            </form>
+
+
+            <div class="carrossel">
+                <button id="anterior">←</button>
+
+                <img id="imagem-carro" src="./images/carros/Equinox2-1151x768.jpg">
+
+                <button id="proximo">→</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="agendamento" id="agendamento">
+        <p class="subtitulo-agendamento">EXPERIÊNCIA ATRION</p>
+
+        <h2>Uma nova experiência ao volante.</h2>
+
+        <p class="texto-agendamento">
+            Conheça nossos veículos de perto e encontre aquele que combina com você.
+        </p>
+
+        <a href="#formulario" class="botao-visita">AGENDAR VISITA</a>
+    </section>
+
+    <section class="sobre-nos" id="sobre-nos">
+
+        <p class="subtitulo-sobre">QUEM SOMOS</p>
+
+        <h2>Mais do que carros. Uma nova experiência.</h2>
+
+        <p class="texto-sobre">
+            A Atrion nasceu para tornar a busca pelo carro ideal
+            mais simples, moderna e especial. Queremos ajudar cada
+            cliente a encontrar um veículo que combine com seu estilo
+            de vida, suas necessidades e seus planos para o futuro.
+        </p>
+
+        <div class="valores-sobre">
+
+            <div class="item-sobre">
+                <h3>Nosso propósito</h3>
+                <p>
+                    Facilitar a escolha do seu próximo veículo com
+                    praticidade, atenção e transparência.
+                </p>
+            </div>
+
+            <div class="item-sobre">
+                <h3>Nosso compromisso</h3>
+                <p>
+                    Oferecer uma experiência de compra organizada,
+                    com foco nas necessidades de cada cliente.
+                </p>
+            </div>
+
+            <div class="item-sobre">
+                <h3>Nossa visão</h3>
+                <p>
+                    Construir uma marca reconhecida pela inovação,
+                    confiança e qualidade no atendimento.
+                </p>
+            </div>
+
         </div>
 
-    </div>
-</section>
+        <a href="#inicio" class="botao-voltar-topo" aria-label="Voltar ao início da página" title="Voltar ao início">
+            ↑
+        </a>
 
-<section class="agendamento" id="agendamento">
-    <p class="subtitulo-agendamento">EXPERIÊNCIA ATRION</p>
+    </section>
 
-    <h2>Uma nova experiência ao volante.</h2>
-
-    <p class="texto-agendamento">
-        Conheça nossos veículos de perto e encontre aquele que combina com você.
-    </p>
-
-    <a href="#formulario" class="botao-visita">AGENDAR VISITA</a>
-</section>
-
-<section class="sobre-nos" id="sobre-nos">
-
-    <p class="subtitulo-sobre">QUEM SOMOS</p>
-
-    <h2>Mais do que carros. Uma nova experiência.</h2>
-
-    <p class="texto-sobre">
-        A Atrion nasceu para tornar a busca pelo carro ideal
-        mais simples, moderna e especial. Queremos ajudar cada
-        cliente a encontrar um veículo que combine com seu estilo
-        de vida, suas necessidades e seus planos para o futuro.
-    </p>
-
-    <div class="valores-sobre">
-
-        <div class="item-sobre">
-            <h3>Nosso propósito</h3>
-            <p>
-                Facilitar a escolha do seu próximo veículo com
-                praticidade, atenção e transparência.
-            </p>
-        </div>
-
-        <div class="item-sobre">
-            <h3>Nosso compromisso</h3>
-            <p>
-                Oferecer uma experiência de compra organizada,
-                com foco nas necessidades de cada cliente.
-            </p>
-        </div>
-
-        <div class="item-sobre">
-            <h3>Nossa visão</h3>
-            <p>
-                Construir uma marca reconhecida pela inovação,
-                confiança e qualidade no atendimento.
-            </p>
-        </div>
-
-    </div>
-
-    <a href="#inicio" class="botao-voltar-topo" aria-label="Voltar ao início da página" title="Voltar ao início">
-        ↑
-    </a>
-
-</section>
-
-<button>Ver veículos</button>
-<script src="js/script.js"></script>
+    <button>Ver veículos</button>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
